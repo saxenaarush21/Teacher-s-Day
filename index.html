@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16284d">
+  <title>Happy Teacher's Day</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: clamp(28px, 7vw, 80px) 16px;
+      background:
+        linear-gradient(rgba(11, 25, 53, .10), rgba(11, 25, 53, .10)),
+        url("background.png") center top / cover;
+
+      font-family: Georgia, "Times New Roman", serif;
+      color: #fff;
+    }
+    .page {
+      width: min(920px, 100%);
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 clamp(22px, 4vw, 42px);
+      font-size: clamp(1.5rem, 7vw, 5.5rem);
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-shadow: 0 3px 18px rgba(0,0,0,.45);
+    }
+    .video-wrap {
+      width: fit-content;
+      margin: 0 auto;
+      padding: clamp(6px, 1vw, 10px);
+      border-radius: 18px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.28);
+      box-shadow: 0 18px 55px rgba(0,0,0,.38);
+      backdrop-filter: blur(4px);
+    }
+    video {
+      display: block;
+      width: auto;
+      height: auto;
+      max-height: 78vh;
+      border-radius: 12px;
+      background: #071326;
+      object-fit: contain;
+    }
+    .hint {
+      margin: 18px 0 0;
+      font-size: clamp(.85rem, 2vw, 1rem);
+      opacity: .85;
+      text-shadow: 0 2px 8px rgba(0,0,0,.4);
+    }
+    @media (max-width: 600px) {
+      body { padding: 30px 12px; }
+      .video-wrap { border-radius: 14px; padding: 5px; }
+      video { border-radius: 9px; max-height: 70vh; }
+
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1>Happy Teacher's Day</h1>
+    <div class="video-wrap">
+      <video controls playsinline preload="metadata" id="myVideo">
+        <source src="https://res.cloudinary.com/xxlhjv97/video/upload/v1788340056/teachers-day-video.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+    </div>
+    <p class="hint">A small tribute to a wonderful teacher.</p>
+  </main>
+</body>
+</html>
